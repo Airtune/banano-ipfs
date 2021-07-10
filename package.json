@@ -6,6 +6,10 @@
   "files": [
     "./index.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Airtune/banano-ipfs.git"
+  },
   "scripts": {
     "eslint": "eslint --fix 'index.js'",
     "docs": "./node_modules/documentation/bin/documentation.js build --config documentation.yaml documentation.js -f md -o docs/documentation.md",
