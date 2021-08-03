@@ -38,7 +38,7 @@ const validateIpfsCidHex = (ipfsCidHex) => {
 /**
  * Gets the IPFS CID encoded into a banano account.
  * @memberof bananoIpfs
- * @param {string} ipfsCid 
+ * @param {string} ipfsCid
  * @return {string} ipfsAccount. A banano account with an IPFS CID encoded into the public key.
  */
 const ifpsCidToAccount = (ipfsCid) => {
@@ -56,7 +56,7 @@ const ifpsCidToAccount = (ipfsCid) => {
 /**
  * Gets the IPFS CID encoded into a banano account.
  * @memberof bananoIpfs
- * @param {string} ipfsAccount. A banano account with an IPFS CID encoded into the public key.
+ * @param {string} ipfsAccount A banano account with an IPFS CID encoded into the public key.
  * @return {string} ipfsCid
  */
 const accountToIpfsCid = (ipfsAccount) => {
@@ -71,4 +71,4 @@ const accountToIpfsCid = (ipfsAccount) => {
   return ipfsCid;
 };
 
-module.exports = {ifpsCidToAccount, accountToIpfsCid};
+module.exports = {ifpsCidToAccount, accountToIpfsCid, validateIpfsCidHex};

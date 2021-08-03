@@ -26,7 +26,7 @@ Gets the IPFS CID encoded into a banano account.
 
 #### Parameters
 
-*   `ipfsAccount`  
+*   `ipfsAccount` **[string][6]** A banano account with an IPFS CID encoded into the public key.
 
 Returns **[string][6]** ipfsCid
 
