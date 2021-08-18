@@ -1,6 +1,6 @@
 {
   "name": "@bananocoin/banano-ipfs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tool for converting between IPFS CID v0, hex, and Banano addresses.",
   "main": "index.js",
   "author": "Airtune and Coranos",
@@ -23,7 +23,7 @@
     "test": "./node_modules/mocha/bin/mocha --recursive -t 100000 test/"
   },
   "dependencies": {
-    "@bananocoin/bananojs": "^2.4.15",
+    "@bananocoin/bananojs": "^2.4.16",
     "bs58": "^4.0.1"
   },
   "preferGlobal": true,
