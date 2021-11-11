@@ -7,6 +7,7 @@
 ## to publish a new version
 
     npm run preflight;
+
     npm --no-git-tag-version version patch;
 
 ### good to commit here, so published code is same as NPM code.
