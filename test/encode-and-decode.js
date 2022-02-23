@@ -11,7 +11,7 @@ const invalidAccount = 'ba_1234err';
 describe('bananoIpfs', () => {
   it('encodes and decodes without changing CID', async () => {
     const account = bananoIpfs.ifpsCidToAccount(validCid);
-    console.log(account);
+    // console.log(account);
     const decodedCid = bananoIpfs.accountToIpfsCid(account);
     expect(decodedCid).to.equal(validCid);
   });
