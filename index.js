@@ -32,7 +32,7 @@ const validateIpfsCidHex = (ipfsCidHex) => {
 
   if (!cidHexPattern.test(ipfsCidHex)) {
     throw Error(
-      `ipfsCidHex:'${ipfsCidHex}' not 64 hex chars after prefix 1220, ${ipfsCidHex.length}`
+        `ipfsCidHex:'${ipfsCidHex}' not 64 hex chars after prefix 1220, ${ipfsCidHex.length}`,
     );
   }
 };
@@ -73,4 +73,4 @@ const accountToIpfsCid = (ipfsAccount) => {
   return ipfsCid;
 };
 
-module.exports = { ifpsCidToAccount, accountToIpfsCid, validateIpfsCidHex };
+module.exports = {ifpsCidToAccount, accountToIpfsCid, validateIpfsCidHex};

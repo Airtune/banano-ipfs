@@ -1,6 +1,6 @@
 'use strict';
 
-const { expect } = require('chai');
+const {expect} = require('chai');
 const bananoIpfs = require('../index.js');
 const validCid = 'QmbzTMo42KADUbLwc43KR9Se6aV3N6wfKqFbSr2qN1gJqR';
 const invalidCid1 = 'mbzTMo42KADUbLwc43KR9Se6aV3N6wfKqFbSr2qN1gJqR';
