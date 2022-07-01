@@ -1,6 +1,6 @@
 {
   "name": "@bananocoin/banano-ipfs",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Tool for converting between IPFS CID v0, hex, and Banano addresses.",
   "main": "index.js",
   "author": "Airtune and Coranos",
@@ -16,27 +16,27 @@
     "./index.js"
   ],
   "scripts": {
-    "coverage": "nyc -x 'test/util/**' -x 'test/**' ./node_modules/mocha/bin/mocha -t 100000 test/",
+    "coverage": "nyc -x 'test/util/**' -x 'test/**' ./node_modules/mocha/bin/mocha.js -t 100000 test/",
     "docs": "jsdoc2md documentation.js index.js > docs/documentation.md",
     "eslint": "eslint --fix '**/*.js'",
     "npm-check-updates": "npm-check-updates --target minor -u",
-    "preflight": "npm update && npm run npm-check-updates && npm i && npm audit fix && npm run eslint && npm run prettier && npm run coverage && npm run docs && npm outdated",
+    "preflight": "npm update && npm run npm-check-updates && npm i && npm audit fix && npm run eslint && npm run prettier && npm run coverage && npm run docs && npm outdated && echo 'preflight passed'",
     "prettier": "prettier \"**/**.{ts,json,css,scss,html}\" --write",
-    "test": "./node_modules/mocha/bin/mocha --recursive -t 100000 test/"
+    "test": "./node_modules/mocha/bin/mocha.js --recursive -t 100000 test/"
   },
   "dependencies": {
-    "@bananocoin/bananojs": "^2.5.14",
+    "@bananocoin/bananojs": "^2.5.16",
     "bs58": "^5.0.0"
   },
   "preferGlobal": true,
   "devDependencies": {
     "chai": "^4.3.6",
-    "eslint": "^8.15.0",
+    "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
     "jsdoc-to-markdown": "^7.1.1",
     "mocha": "^10.0.0",
-    "npm-check-updates": "^13.0.1",
+    "npm-check-updates": "^15.0.1",
     "nyc": "^15.1.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   }
 }
