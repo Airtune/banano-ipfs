@@ -10,6 +10,11 @@
 
     npm --no-git-tag-version version patch;
 
-### good to commit here, so published code is same as NPM code.
+## commit here and publish
 
+    git commit -a -m 'updating dependencies';
+    npm version patch;
+    git pull;
+    git push;
+    git push --tags;
     npm publish --access public;
