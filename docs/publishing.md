@@ -7,11 +7,7 @@
 ## to publish a new version
 
     npm run preflight;
-
-    npm --no-git-tag-version version patch;
-
-## commit here and publish
-
+    
     git commit -a -m 'updating dependencies';
     npm version patch;
     git pull;
