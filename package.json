@@ -25,18 +25,18 @@
     "test": "./node_modules/mocha/bin/mocha.js --recursive -t 100000 test/"
   },
   "dependencies": {
-    "@bananocoin/bananojs": "^2.7.14",
+    "@bananocoin/bananojs": "^2.8.8",
     "bs58": "^5.0.0"
   },
   "preferGlobal": true,
   "devDependencies": {
     "chai": "^4.3.7",
-    "eslint": "^8.33.0",
+    "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
     "jsdoc-to-markdown": "^8.0.0",
     "mocha": "^10.2.0",
-    "npm-check-updates": "^16.6.3",
+    "npm-check-updates": "^16.10.8",
     "nyc": "^15.1.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.7"
   }
 }
