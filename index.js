@@ -16,8 +16,8 @@ const getAccount = (publicKey) => {
 };
 
 const validateIpfsCid = (ipfsCid) => {
-  if (typeof(ipfsCid) !== 'string') {
-    throw Error(`ipfs_cid expected to be string, got: ${typeof(ipfsCid)}`);
+  if (typeof ipfsCid !== 'string') {
+    throw Error(`ipfs_cid expected to be string, got: ${typeof ipfsCid}`);
   }
 
   if (!cidB58Pattern.test(ipfsCid)) {
@@ -26,26 +26,28 @@ const validateIpfsCid = (ipfsCid) => {
 };
 
 const validateIpfsCidHex = (ipfsCidHex) => {
-  if (typeof(ipfsCidHex) !== 'string') {
-    throw Error(`ipfsCidHex expected to be string, got: ${typeof(ipfsCidHex)}`);
+  if (typeof ipfsCidHex !== 'string') {
+    throw Error(`ipfsCidHex expected to be string, got: ${typeof ipfsCidHex}`);
   }
 
   if (!cidHexPattern.test(ipfsCidHex)) {
-    throw Error(`ipfsCidHex:'${ipfsCidHex}' not 64 hex chars after prefix 1220, ${ipfsCidHex.length}`);
+    throw Error(
+        `ipfsCidHex:'${ipfsCidHex}' not 64 hex chars after prefix 1220, ${ipfsCidHex.length}`,
+    );
   }
 };
 
 /**
  * Gets the IPFS CID encoded into a banano account.
  * @memberof bananoIpfs
- * @param {string} ipfsCid 
+ * @param {string} ipfsCid
  * @return {string} ipfsAccount. A banano account with an IPFS CID encoded into the public key.
  */
 const ifpsCidToAccount = (ipfsCid) => {
   validateIpfsCid(ipfsCid);
 
   const bytes = bs58.decode(ipfsCid);
-  const ipfsCidHex = bytes.toString('hex');
+  const ipfsCidHex = Buffer.from(bytes).toString('hex');
   validateIpfsCidHex(ipfsCidHex);
 
   const ipfsPublicKey = ipfsCidHex.substring(4);
@@ -56,7 +58,7 @@ const ifpsCidToAccount = (ipfsCid) => {
 /**
  * Gets the IPFS CID encoded into a banano account.
  * @memberof bananoIpfs
- * @param {string} ipfsAccount. A banano account with an IPFS CID encoded into the public key.
+ * @param {string} ipfsAccount A banano account with an IPFS CID encoded into the public key.
  * @return {string} ipfsCid
  */
 const accountToIpfsCid = (ipfsAccount) => {
@@ -71,4 +73,4 @@ const accountToIpfsCid = (ipfsAccount) => {
   return ipfsCid;
 };
 
-module.exports = {ifpsCidToAccount, accountToIpfsCid};
+module.exports = {ifpsCidToAccount, accountToIpfsCid, validateIpfsCidHex};
